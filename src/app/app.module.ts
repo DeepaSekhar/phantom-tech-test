@@ -7,9 +7,20 @@ import { FormComponent } from './form/form.component';
 import { ListComponent } from './list/list.component';
 import { ResultComponent } from './result/result.component';
 
-const appRoutes: Routes = [{ path: 'overview', component: OverviewComponent }];
+const appRoutes: Routes = [
+  { path: 'overview', component: OverviewComponent },
+  { path: 'list', component: ListComponent },
+  { path: 'result', component: ResultComponent },
+  { path: 'form', component: FormComponent },
+];
 @NgModule({
-  declarations: [AppComponent, OverviewComponent, FormComponent, ListComponent, ResultComponent],
+  declarations: [
+    AppComponent,
+    OverviewComponent,
+    FormComponent,
+    ListComponent,
+    ResultComponent,
+  ],
   imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
   providers: [],
   bootstrap: [AppComponent],
