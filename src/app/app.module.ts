@@ -5,10 +5,11 @@ import { AppComponent } from './app.component';
 import { OverviewComponent } from './overview/overview.component';
 import { FormComponent } from './form/form.component';
 import { ListComponent } from './list/list.component';
+import { ResultComponent } from './result/result.component';
 
 const appRoutes: Routes = [{ path: 'overview', component: OverviewComponent }];
 @NgModule({
-  declarations: [AppComponent, OverviewComponent, FormComponent, ListComponent],
+  declarations: [AppComponent, OverviewComponent, FormComponent, ListComponent, ResultComponent],
   imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
   providers: [],
   bootstrap: [AppComponent],
