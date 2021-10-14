@@ -9,9 +9,9 @@ import { ResultComponent } from './result/result.component';
 
 const appRoutes: Routes = [
   { path: 'overview', component: OverviewComponent },
-  { path: 'list', component: ListComponent },
   { path: 'result', component: ResultComponent },
-  { path: 'form', component: FormComponent },
+  { path: '', redirectTo: '/overview', pathMatch: 'full' },
+  { path: '**', redirectTo: 'overview' },
 ];
 @NgModule({
   declarations: [
