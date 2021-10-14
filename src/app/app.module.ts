@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { OverviewComponent } from './components/overview/overview.component';
@@ -21,7 +22,7 @@ const appRoutes: Routes = [
     ListComponent,
     ResultComponent,
   ],
-  imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
+  imports: [BrowserModule, RouterModule.forRoot(appRoutes), HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
