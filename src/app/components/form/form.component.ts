@@ -1,28 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { UrlCrudService } from 'src/app/services/url-crud.service';
 import { UrlValidationService } from '../../services/url-validation.service';
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss'],
 })
-export class FormComponent implements OnInit {
-  constructor(private urlService: UrlValidationService) {}
+export class FormComponent {
+  @Output() inputUrlEmt = new EventEmitter<string>();
+  constructor() {}
 
-  ngOnInit(): void {}
-
-  isValidHttpUrl(string: string): boolean {
-    let url: URL;
-
-    try {
-      url = new URL(string);
-      const protocol = url.protocol === 'http:' || url.protocol === 'https:';
-      if (protocol === true) {
-        this.urlService.isUrlExist(string);
-      }
-    } catch (_) {
-      return false;
-    }
+  public onUserSubmit(inputUrl: string, evt: Event): void {
+    evt.preventDefault();
+    this.inputUrlEmt.emit(inputUrl);
   }
-  //  limitation for the validation
-  // -> It wont accept www.
 }

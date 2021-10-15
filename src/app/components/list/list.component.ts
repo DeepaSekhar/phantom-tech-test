@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { URL } from '../../models/url';
+import { UrlCrudService } from 'src/app/services/url-crud.service';
 
 @Component({
   selector: 'app-list',
@@ -6,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list.component.scss'],
 })
 export class ListComponent implements OnInit {
-  list: URL;
-  constructor() {}
-  ngOnInit(): void {}
+  url = [];
+
+  constructor(private urlCrudService: UrlCrudService) {}
+
+  ngOnInit() {}
 }

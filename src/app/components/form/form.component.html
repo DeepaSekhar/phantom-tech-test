@@ -1,7 +1,13 @@
 <form>
   <!-- basic url validation  -->
   <input #url type="url" required />
-  <button (click)="isValidHttpUrl(url.value); $event.preventDefault()">
-    Submit
-  </button>
+  <button (click)="onUserSubmit(url.value, $event)">submit</button>
 </form>
+
+<!-- ORIGINAL -->
+<!-- <form>
+  <input #url type="url" required />
+  <button (click)="isValidHttpUrl(url.value); $event.preventDefault()">
+    submit
+  </button>
+</form> -->
