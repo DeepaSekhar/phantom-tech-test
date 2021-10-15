@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class UrlCrudService {
   urls = [];
+
   private urlSubject = new BehaviorSubject<String | null>(null);
   url$: Observable<String | null>;
 
@@ -30,26 +31,9 @@ export class UrlCrudService {
     this.urlSubject.next(newBookmark);
     this.router.navigate(['/result']);
   }
+  getUrls() {
+    //get the value from local storage
+    const bookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
+    return bookmarks;
+  }
 }
-
-//   private url: URL[];
-//   constructor() {
-//     let urls = this.getLocalStorageUrls();
-//   }
-//   getLocalStorageUrls() {
-//     let localStorageItem = JSON.parse(localStorage.getItem('urls'));
-//     return localStorageItem == null ? [] : localStorageItem.url;
-//   }
-//   setLocalStorageUrls(url: URL[]) {
-//     localStorage.setItem('url', JSON.stringify({ url: URL }));
-//   }
-//   addURL(newUrl: String) {
-//     let urls = JSON.parse(localStorage.getItem('url'));
-//     //add new url
-//     urls.push(newUrl);
-//     //set new url
-//     localStorage.setItem('url', JSON.stringify(urls));
-//   }
-//   deleteUrl() {}
-//   editUrl() {}
-// }

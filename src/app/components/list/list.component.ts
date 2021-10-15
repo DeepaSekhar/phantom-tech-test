@@ -9,8 +9,12 @@ import { UrlCrudService } from 'src/app/services/url-crud.service';
 })
 export class ListComponent implements OnInit {
   url = [];
+  urls;
 
   constructor(private urlCrudService: UrlCrudService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.urls = this.urlCrudService.getUrls();
+    console.log('from list component', this.urls);
+  }
 }

@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class ResultComponent implements OnInit {
   url$ = this.urlCrudService.url$;
+
   constructor(private urlCrudService: UrlCrudService, private router: Router) {}
 
   ngOnInit(): void {}
