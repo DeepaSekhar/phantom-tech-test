@@ -34,6 +34,16 @@ export class UrlCrudService {
   getUrls() {
     //get the value from local storage
     const bookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
+    this.urls = bookmarks;
     return bookmarks;
+  }
+  deleteUrl(url) {
+    console.log('delete from service', url, this.urls);
+
+    for (let i = 0; i < this.urls.length; i++) {
+      if (this.urls[i] == url) {
+        this.urls.splice(i, 1);
+      }
+    }
   }
 }

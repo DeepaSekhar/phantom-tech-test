@@ -17,4 +17,9 @@ export class ListComponent implements OnInit {
     this.urls = this.urlCrudService.getUrls();
     console.log('from list component', this.urls);
   }
+  deleteUrl(url) {
+    console.log('delete from component');
+    this.urlCrudService.deleteUrl(url);
+  }
+  Edit;
 }
