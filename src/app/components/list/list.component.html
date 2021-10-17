@@ -3,4 +3,13 @@
     url
   }}
   <button (click)="deleteUrl(url)">Delete</button>
+  <!-- Toggle show/hide edit form -->
+  <button (click)="toggleEditForm()">Edit</button>
+
+  <!-- Only show form if showEditForm is true -->
+  <section *ngIf="showEditForm" class="edit-form">
+    <input type="text" #newUrl />
+    <!-- Submit old + new urls  -->
+    <button (click)="editUrl(url, newUrl.value)">Save</button>
+  </section>
 </ul>

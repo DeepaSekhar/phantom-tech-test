@@ -9,8 +9,9 @@ import { UrlValidationService } from 'src/app/services/url-validation.service';
 })
 export class OverviewComponent implements OnInit {
   url: string;
+
   constructor(
-    private urlService: UrlValidationService,
+    private urlValidatioService: UrlValidationService,
     private urlCrudService: UrlCrudService
   ) {}
 
@@ -18,20 +19,7 @@ export class OverviewComponent implements OnInit {
     this.urlCrudService.getUrls();
   }
 
-  public isValidHttpUrl(inputUrl: string): boolean {
-    //getting the url to send to the result component
-    this.url = inputUrl;
-    let url: URL;
-
-    try {
-      url = new URL(inputUrl);
-      const protocol = url.protocol === 'http:' || url.protocol === 'https:';
-      if (protocol === true) {
-        // this.urlService.isUrlExist(inputUrl);
-        this.urlCrudService.addUrlToLocalStorage(inputUrl);
-      }
-    } catch (_) {
-      return false;
-    }
+  public isValidHttpUrl(inputUrl: string) {
+    this.urlValidatioService.isValidHttpUrl(inputUrl);
   }
 }

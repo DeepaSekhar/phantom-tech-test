@@ -10,7 +10,7 @@ import { UrlCrudService } from 'src/app/services/url-crud.service';
 export class ListComponent implements OnInit {
   url = [];
   urls;
-
+  showEditForm = false;
   constructor(private urlCrudService: UrlCrudService) {}
 
   ngOnInit() {
@@ -21,5 +21,19 @@ export class ListComponent implements OnInit {
     console.log('delete from component');
     this.urlCrudService.deleteUrl(url);
   }
-  Edit;
+  toggleEditForm() {
+    // OTHER METHODS OF TOGGLING
+    // this.showEditForm = this.showEditForm === true ? false : true
+    // this.showEditForm = !this.showEditForm
+    if (this.showEditForm === true) {
+      this.showEditForm = false;
+    } else {
+      this.showEditForm = true;
+    }
+  }
+  editUrl(oldUrl: string, newUrl: string) {
+    this.toggleEditForm();
+    console.log('old vale', oldUrl, 'new value', newUrl);
+    this.urlCrudService.editUrl(oldUrl, newUrl);
+  }
 }
