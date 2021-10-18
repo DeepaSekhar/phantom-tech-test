@@ -52,7 +52,7 @@ To get started locally, follow these instructions:
 - Never worked with local storage .So had to learn how to work with local storage.
 - Validation-When tried to validate Url using Http request(To check status of the request)was getting CORS error.
 - Edit operation (having a bug in it).
-- Pagination
+- Pagination(investigated but not implemented due to time constraints)
 
 ## Need implementation
 
