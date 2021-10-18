@@ -123,6 +123,10 @@
               "devServerTarget": "phantom-tech-test:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }
