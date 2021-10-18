@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.14
 
+[Live on Github pages](https://deepasekhar.github.io/spotify-app/)
+
 # Aim
 
 This project is created for tech challenge for Phantom
