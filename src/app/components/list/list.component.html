@@ -1,7 +1,8 @@
+<!-- displaying list of url -->
 <ul *ngFor="let url of urls">
-  {{
-    url
-  }}
+  <li>
+    {{ url }}
+  </li>
   <div class="btns">
     <button class="btn" (click)="deleteUrl(url)">Delete</button>
     <!-- Toggle show/hide edit form -->
