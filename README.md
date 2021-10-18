@@ -1,27 +1,59 @@
-# PhantomTechTest
+# Phantom Tech Challenge
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.8.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.14
 
-## Development server
+# Aim
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This project is created for tech challenge for Phantom
 
-## Code scaffolding
+# Project
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Users can search for:
 
-## Build
+- Enter url to the list.
+- View all listed Urls.
+- View their inputed Url with a greeting message.
+- Perform CRUD operations.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+# Technologies used
 
-## Running unit tests
+Angular
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Instructions
 
-## Running end-to-end tests
+To get started locally, follow these instructions:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+1. If you haven't done it already, make a fork of this repo.
+2. Clone to your local computer using git.
+3. Make sure that you have Node installed with npm install
+4. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Further help
+## Features of Phantom tech-test
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Get an input from the user.
+- Display all the links to the same page as user enter url.
+- Once the user submit the link It will show a greeting message with their url.
+- Perform CRUD operation.
+- Data stored and retrieved from local storage.
+
+## approch
+
+1. I started with learning how to handle data using the local storage.
+2. I draw diagrams of how the different component needed to interact with each other and how the data would flow.
+3. I created a trello board to plan the project.
+4. Next, Started building up the project.
+5. Used scss to style pages.
+6. I used 4 screen sizes for the responsive design.( small: 767px, medium: 992px large: 1023px,xlarge: 1440px )
+
+## Learnings/Challenges
+
+- Never worked with local storage .So had to learn how to work with local storage.
+- Validation-When tried to validate Url using Http request(To check status of the request)was getting CORS error.
+- Edit operation (having a bug in it).
+- Pagination
+
+## Need implementation
+
+- Need to fix CORS error for validation.
+- Having a bug in Edit operation.(When click on one Url it was opening edit function for all the urls)
+- Need to apply more styling on the pages.

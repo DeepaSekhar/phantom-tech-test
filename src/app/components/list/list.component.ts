@@ -22,9 +22,6 @@ export class ListComponent implements OnInit {
     this.urlCrudService.deleteUrl(url);
   }
   toggleEditForm() {
-    // OTHER METHODS OF TOGGLING
-    // this.showEditForm = this.showEditForm === true ? false : true
-    // this.showEditForm = !this.showEditForm
     if (this.showEditForm === true) {
       this.showEditForm = false;
     } else {

@@ -33,7 +33,7 @@ export class UrlValidationService {
       return false;
     }
   }
-
+  //checking Url exist or not (by checking whether its sending a status 200)
   isUrlExist(url: string) {
     const httpRequest = new XMLHttpRequest();
     httpRequest.open('HEAD', url, false);
@@ -43,5 +43,6 @@ export class UrlValidationService {
     // 1.get the Url from the textbox.
     // 2.Run a head request to the url
     // 3.check status is not 404 the url exists
+    // sending CORS error need some library to handle it
   }
 }
