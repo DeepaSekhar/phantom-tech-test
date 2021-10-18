@@ -1,5 +1,4 @@
-//listing urls
-<ul *ngFor="let url of urls">
+<ul *ngFor="let url of pages[currentPage]">
   {{
     url
   }}
@@ -16,3 +15,8 @@
     <button class="save-btn" (click)="editUrl(url, newUrl.value)">Save</button>
   </section>
 </ul>
+
+<section>
+  <button class="previous" (click)="goToPreviousPage()">Previous</button>
+  <button class="next" (click)="goToNextPage()">Next</button>
+</section>
