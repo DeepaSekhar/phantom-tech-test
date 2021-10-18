@@ -2,14 +2,16 @@
   {{
     url
   }}
-  <button (click)="deleteUrl(url)">Delete</button>
-  <!-- Toggle show/hide edit form -->
-  <button (click)="toggleEditForm()">Edit</button>
+  <div class="btns">
+    <button class="btn" (click)="deleteUrl(url)">Delete</button>
+    <!-- Toggle show/hide edit form -->
+    <button class="btn" (click)="toggleEditForm()">Edit</button>
+  </div>
 
   <!-- Only show form if showEditForm is true -->
   <section *ngIf="showEditForm" class="edit-form">
-    <input type="text" #newUrl />
+    <input class="edit-input" type="text" #newUrl />
     <!-- Submit old + new urls  -->
-    <button (click)="editUrl(url, newUrl.value)">Save</button>
+    <button class="save-btn" (click)="editUrl(url, newUrl.value)">Save</button>
   </section>
 </ul>

@@ -1,6 +1,10 @@
-<h1>Thank you for successfully entering the url</h1>
+<div class="container result">
+  <div class="greeting">
+    <h1>Thank you for successfully entered the url</h1>
 
-<div *ngIf="url$ | async as url">
-  <h3>The url you entered is {{ url }}</h3>
-  <button (click)="navigateToOverView()">Back</button>
+    <div *ngIf="url$ | async as url">
+      <h3>The url you entered is {{ url }}</h3>
+    </div>
+  </div>
+  <button class="back-button" (click)="navigateToOverView()">Back</button>
 </div>

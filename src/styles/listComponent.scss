@@ -1,0 +1,76 @@
+ul {
+  font-size: 15px;
+
+  height: 38px;
+  width: 80%;
+  background-color: rgb(72, 117, 185);
+  border: 1px solid white;
+  box-shadow: 0 0 2px 2px rgb(87, 75, 75);
+  border-radius: 37px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  @include respond-to("small") {
+    height: 44px;
+    font-size: 20px;
+    flex-direction: row;
+    justify-content: center;
+  }
+  @include respond-to("medium") {
+    height: 59px;
+    font-size: 25px;
+  }
+  @include respond-to("large") {
+  }
+  @include respond-to("xlarge") {
+    height: 68px;
+    font-size: 35px;
+  }
+}
+.save-btn {
+  background-color: rgb(18, 18, 82);
+  height: 26px;
+}
+.btns {
+  margin-right: 2px;
+
+  @include respond-to("small") {
+    margin-left: 10px;
+    width: 25%;
+  }
+  @include respond-to("medium") {
+    margin-left: 12px;
+  }
+}
+
+.btn {
+  height: 19px;
+  color: black;
+  background-color: white;
+  @include respond-to("small") {
+  }
+  @include respond-to("medium") {
+    height: 32px;
+  }
+  @include respond-to("large") {
+    height: 33px;
+  }
+  @include respond-to("xlarge") {
+    height: 37px;
+  }
+}
+.edit-form {
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+}
+.edit-input {
+  height: 21px;
+  @include respond-to("small") {
+    width: 71%;
+  }
+  @include respond-to("medium") {
+    width: 81%;
+  }
+}
