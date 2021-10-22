@@ -13,6 +13,9 @@ export class ResultComponent implements OnInit {
   constructor(private urlCrudService: UrlCrudService, private router: Router) {}
 
   ngOnInit(): void {}
+
+  //navigate to overview page
+
   navigateToOverView() {
     this.router.navigateByUrl('/overview');
   }

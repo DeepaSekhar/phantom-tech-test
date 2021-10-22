@@ -28,7 +28,7 @@ ul {
     font-size: 35px;
   }
 }
-.li {
+li {
   list-style-type: none;
 }
 .save-btn {
@@ -37,6 +37,7 @@ ul {
 }
 .btns {
   margin-right: 2px;
+  
 
   @include respond-to("small") {
     margin-left: 10px;

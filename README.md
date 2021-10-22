@@ -17,6 +17,7 @@ Users can search for:
 - View their inputed Url with a greeting message.
 - Perform CRUD operations.
 
+
 # Technologies used
 
 Angular
@@ -59,3 +60,4 @@ To get started locally, follow these instructions:
 - Need to fix CORS error for validation.
 - Having a bug in Edit operation.(When click on one Url it was opening edit function for all the urls)
 - Need to apply more styling on the pages.
+- pagination

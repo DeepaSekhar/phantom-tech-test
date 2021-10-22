@@ -20,12 +20,10 @@ export class UrlValidationService {
     //getting the url to send to the result component
 
     let url: URL;
-
     try {
       url = new URL(inputUrl);
       const protocol = url.protocol === 'http:' || url.protocol === 'https:';
       if (protocol === true) {
-        // this.urlService.isUrlExist(inputUrl);
         this.urlCrudService.addUrlToLocalStorage(inputUrl);
       }
     } catch (_) {

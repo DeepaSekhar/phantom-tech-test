@@ -8,9 +8,12 @@ import { UrlValidationService } from '../../services/url-validation.service';
 })
 export class FormComponent {
   //sending url to the parent
+
   @Output() inputUrlEmt = new EventEmitter<string>();
   constructor() {}
+
   //when user click submit button it Send data to the
+
   public onUserSubmit(inputUrl: string, evt: Event): void {
     evt.preventDefault();
     this.inputUrlEmt.emit(inputUrl);

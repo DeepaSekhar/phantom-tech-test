@@ -18,7 +18,7 @@ export class OverviewComponent implements OnInit {
   ngOnInit(): void {
     this.urlCrudService.getUrls();
   }
-
+  //sending the input url for validation.
   public isValidHttpUrl(inputUrl: string) {
     this.urlValidatioService.isValidHttpUrl(inputUrl);
   }
