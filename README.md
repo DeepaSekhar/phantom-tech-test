@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.14
 
-[Live on Github pages]
+[Live on Github pages](https://deepasekhar.github.io/phantom-tech-test/)
 
 # Aim
 
@@ -10,12 +10,13 @@ This project is created for tech challenge for Phantom
 
 # Project
 
-Users can search for:
+Users can :
 
 - Enter url to the list.
 - View all listed Urls.
 - View their inputed Url with a greeting message.
 - Perform CRUD operations.
+- View urls using next and previous button(20 urls display per page)
 
 # Technologies used
 
@@ -36,6 +37,7 @@ To get started locally, follow these instructions:
 - Display all the links to the same page as user enter url.
 - Once the user submit the link It will show a greeting message with their url.
 - Perform CRUD operation.
+- View urls using next and previous button(20 urls displays per page)
 - Data stored and retrieved from local storage.
 
 ## approch
@@ -52,11 +54,10 @@ To get started locally, follow these instructions:
 - Never worked with local storage .So had to learn how to work with local storage.
 - Validation-When tried to validate Url using Http request(To check status of the request)was getting CORS error.
 - Edit operation (having a bug in it).
-- Pagination(investigated but not implemented due to time constraints)
+- pagination
 
 ## Need implementation
 
 - Need to fix CORS error for validation.
 - Having a bug in Edit operation.(When click on one Url it was opening edit function for all the urls)
 - Need to apply more styling on the pages.
-- pagination
