@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.14
 
-[Live on Github pages](https://deepasekhar.github.io/spotify-app/)
+[Live on Github pages]
 
 # Aim
 
@@ -16,7 +16,6 @@ Users can search for:
 - View all listed Urls.
 - View their inputed Url with a greeting message.
 - Perform CRUD operations.
-
 
 # Technologies used
 

@@ -1,104 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { URL } from '../../models/url';
-import { UrlCrudService } from 'src/app/services/url-crud.service';
-import { templateJitUrl } from '@angular/compiler';
-import { Urls22 } from './mock-data/100.const';
-
-@Component({
-  selector: 'app-list',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.scss'],
-})
-export class ListComponent implements OnInit {
-  url = [];
-  urls;
-  showEditForm = false;
-  pages: string[][] = [];
-  numOfPages: number;
-  currentPage = 1;
-  currentPageIndex = 0;
-  private perPage = 20;
-  constructor(private urlCrudService: UrlCrudService) {}
-
-  ngOnInit() {
-    this.urls = Urls22;
-    // this.urls = this.urlCrudService.getUrls();
-    console.log('urls and length of urls', this.urls, this.urls.length);
-    this.sortUrlsIntoPages();
-  }
-  deleteUrl(url) {
-    this.urlCrudService.deleteUrl(url);
-  }
-
-  // toggling form when edit button clicks
-
-  toggleEditForm() {
-    if (this.showEditForm === true) {
-      this.showEditForm = false;
-    } else {
-      this.showEditForm = true;
-    }
-  }
-  editUrl(oldUrl: string, newUrl: string) {
-    this.toggleEditForm();
-    this.urlCrudService.editUrl(oldUrl, newUrl);
-  }
-  // sort urls into pages
-
-  sortUrlsIntoPages() {
-    // calculating how many pages needed by dividing all url by 20
-
-    this.numOfPages = Math.ceil(this.urls.length / this.perPage);
-    console.log('number of pages from function', this.numOfPages);
-    let tempArray = [];
-
-    //pushing items to temporary array
-    if (this.urls.length <= this.perPage) {
-      return this.pages.push(this.urls);
-    }
-
-    for (let i = 0; i < this.urls.length; i++) {
-      tempArray.push(this.urls[i]); // add item to temporary array
-
-      // when at end of whole list, add remaining urls to pages
-      if (i + 1 === this.urls.length) {
-        this.pages.push(tempArray);
-        return;
-      }
-
-      //pusing tempArray value to the pages.
-      // once you get to end of page or the last url, add to pages array
-      if (i !== 0 && this.isDivisibleByPageNum(i)) {
-        this.pages.push(tempArray);
-        tempArray = [];
-      }
-    }
-  }
-  //next page
-
-  goToNextPage() {
-    console.log('currentPage', this.currentPage);
-    console.log('num of pages', this.numOfPages);
-    if (this.currentPage < this.numOfPages) {
-      this.currentPageIndex++;
-      this.currentPage++;
-    }
-  }
-  // previous page
-
-  goToPreviousPage() {
-    if (this.currentPage > 1) {
-      this.currentPage--;
-      this.currentPageIndex--;
-    }
-  }
-
-  private isDivisibleByPageNum(num: number): boolean {
-    return (num + 1) % this.perPage === 0;
-  }
-}
-
-const placeholderUrls = [
+export const Urls100 = [
   'http://www.youtube.com',
   'http://www.facebook.com',
   'http://www.baidu.com',
@@ -201,4 +101,29 @@ const placeholderUrls = [
   'http://www.answers.yahoo.com',
   'http://www.googleweblight.com',
   'http://www.answers.yahoo.com',
+];
+
+export const Urls22 = [
+  'http://www.youtube.com',
+  'http://www.facebook.com',
+  'http://www.baidu.com',
+  'http://www.yahoo.com',
+  'http://www.amazon.com',
+  'http://www.wikipedia.org',
+  'http://www.qq.com',
+  'http://www.google.co.in',
+  'http://www.twitter.com',
+  'http://www.live.com',
+  'http://www.taobao.com',
+  'http://www.bing.com',
+  'http://www.baidu.com',
+  'http://www.yahoo.com',
+  'http://www.amazon.com',
+  'http://www.wikipedia.org',
+  'http://www.qq.com',
+  'http://www.google.co.in',
+  'http://www.twitter.com',
+  'http://www.live.com',
+  'http://www.taobao.com',
+  'http://www.bing.com',
 ];
