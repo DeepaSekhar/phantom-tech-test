@@ -21,8 +21,7 @@ export class ListComponent implements OnInit {
   constructor(private urlCrudService: UrlCrudService) {}
 
   ngOnInit() {
-    this.urls = Urls22;
-    // this.urls = this.urlCrudService.getUrls();
+    this.urls = this.urlCrudService.getUrls();
     console.log('urls and length of urls', this.urls, this.urls.length);
     this.sortUrlsIntoPages();
   }
