@@ -12,7 +12,7 @@ This project is created for tech challenge for Phantom
 
 Users can :
 
-- Enter url to the list.
+- Enter url to the list.(format http://www/google.com)
 - View all listed Urls.
 - View their inputed Url with a greeting message.
 - Perform CRUD operations.

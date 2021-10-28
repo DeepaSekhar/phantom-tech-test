@@ -1,6 +1,12 @@
 <form class="section">
   <!-- basic url validation   -->
-  <input class="input" #url type="url" required placeholder="enter url" />
+  <input
+    class="input"
+    #url
+    type="url"
+    required
+    placeholder="enter url (eg:http://www.google.com)"
+  />
   <button class="submit-btn" (click)="onUserSubmit(url.value, $event)">
     submit
   </button>
